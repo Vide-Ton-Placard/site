@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Produit{% endblock %}
+
+{% block body %}
+    <h1>Veuillez renseigner le formulaire ci dessous pour ajouter un article en vente.</h1>
+
+    {{ include('produit/_form.html.twig') }}
+
+    <a href="{{ path('produit_index') }}">Voir tous les produits</a>
+{% endblock %}
