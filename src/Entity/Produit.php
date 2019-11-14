@@ -58,6 +58,11 @@ class Produit
      */
     private $statut;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Type;
+
     public function __construct()
     {
         $this->commandes = new ArrayCollection();
@@ -179,6 +184,18 @@ class Produit
     public function setStatut(?Statut $statut): self
     {
         $this->statut = $statut;
+
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->Type;
+    }
+
+    public function setType(string $Type): self
+    {
+        $this->Type = $Type;
 
         return $this;
     }
