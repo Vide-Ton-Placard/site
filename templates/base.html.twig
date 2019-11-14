@@ -2,15 +2,19 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
+        <title>{% block title %}{% endblock %} - Vide ton Placard !</title>
+
         {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+        {% include 'ressources/stylesheet.html.twig' %}
+        {# end importation #}
+        {% block stylesheets %}{% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
+        {% include 'ressources/script.html.twig' %}
+        {# end importation #}
+        {% block javascripts %}
         {% endblock %}
     </body>
 </html>
