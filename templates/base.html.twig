@@ -3,18 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}{% endblock %} - Vide ton Placard !</title>
-
         {{ encore_entry_link_tags('app') }}
         {% include 'ressources/stylesheet.html.twig' %}
         {# end importation #}
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <div class="site-wrap">
+        {% include 'ressources/header.html.twig' %}
         {% block body %}{% endblock %}
+        {% include 'ressources/footer.html.twig' %}
+        </div>
         {{ encore_entry_script_tags('app') }}
         {% include 'ressources/script.html.twig' %}
         {# end importation #}
-        {% block javascripts %}
-        {% endblock %}
+        {% block javascripts %}{% endblock %}
     </body>
 </html>
