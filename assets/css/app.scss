@@ -1,0 +1,18 @@
+// @import 'node_modules/bootstrap/scss/bootstrap.scss';
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+// pour réecrire les variables de bootstrap, notre fichier de variable doit être en premier
+@import "1.variables/variables";
+
+// @import "2.mixins/mixins";
+
+@import "4.generic/global";
+@import "4.generic/img";
+@import "4.generic/link";
+
+@import "5.layout/header";
+@import "5.layout/menu";
+@import "5.layout/button";
+@import "5.layout/footer";
+
+@import "6.blocs/actus";
