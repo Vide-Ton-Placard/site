@@ -1,0 +1,48 @@
+// syntax
+
+/* déclaration d'une fonction
+
+@mixin truc($variable){
+	color:$variable;
+}
+
+////* appel de la fonction
+
+.class{
+	@include truc(#000);
+}
+
+/* déclaration d'une procédure
+
+%ma-fonction{
+	color:#000;
+}
+
+////* appel de la procédure
+
+.class{
+	@extend %ma-fonction;
+	border:0;
+}
+
+
+// fonctions déjà existantes
+ 
+ - lighten($color, $amount) : Makes a color lighter.
+ - darken($color, $amount) : Makes a color darker.
+ - saturate($color, $amount) : Makes a color more saturated.
+ - desaturate($color, $amount) : Makes a color less saturated.
+ 
+Le tout sur ce site : http://sass-lang.com/documentation/Sass/Script/Functions.html
+ 
+*/
+
+%centpourcent{
+	margin-left: -50vw;
+	margin-right: -50vw;
+	clear: both;
+	position: relative;
+	right: 50%;
+	left: 50%;
+	width: 100vw;
+}
