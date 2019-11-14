@@ -16,11 +16,11 @@ class ProduitType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('categorie', EntityType::class, ['class' => CategorieProduit::class, 'choice_label' => 'libelle_categorie',], ['label' => 'Catégorie']) 
+            ->add('categorie', EntityType::class, ['class' => CategorieProduit::class, 'choice_label' => 'libelle_categorie', 'attr' => ['class' => 'mb-3']]) 
             ->add('type', TextType::class, ['label' => 'Type de produit'])
             ->add('taille_produit', TextType::class, ['label' => 'Taille'])
             ->add('etat', EntityType::class, ['class' => Etat::class, 'choice_label' => 'libelle_etat', ],['label' => 'Etat']) 
-            ->add('libelle_produit', TextType::class, ['label' => 'Nom'])
+            ->add('libelle_produit', TextType::class, ['label' => 'Nom du produit'])
             ->add('description_produit', TextType::class, ['label' => 'Détail'])
             ->add('prix_produit', TextType::class, ['label' => 'Prix'])
             ->add('statut')
