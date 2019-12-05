@@ -52,46 +52,6 @@ a {
 	}
 }
 
-.btn {
-	text-transform: uppercase;
-	position: relative;
-	transition: .2s all ease-in-out!important;
-	top: 0;
-	letter-spacing: .05em;
-	&:hover, &:active, &:focus {
-		outline: none;
-		box-shadow: none!important;
-	}
-	&.btn-secondary {
-		background-color: lighten($secondary, 45%);
-		border-color: lighten($secondary, 45%);
-		color: $black;
-	}
-	&.btn-sm {
-		font-size: 14px!important;
-		padding: 10px 20px!important;
-	}
-	&.btn-primary {
-		font-size: 17px;
-		font-weight: 300;
-		letter-spacing: .2em;
-	}
-	&:hover {
-		box-shadow: 0 5px 20px -7px rgba(0,0,0,.9)!important;
-		top: -2px;
-	}
-	
-}
-.form-control {
-	height: 43px;
-	&:active, &:focus {
-		border-color: $primary;
-	}
-	&:hover, &:active, &:focus {
-		box-shadow: none!important;
-	}
-}
-
 .site-section {
 	padding: 2.5em 0;
 	@include media-breakpoint-up(md) {

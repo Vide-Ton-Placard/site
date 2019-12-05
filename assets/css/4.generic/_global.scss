@@ -1,8 +1,20 @@
 html {
 	font-size: .625rem; // 1rem = 10px with this line (easier calcul)
 }
+
 body {
-	font-size: 1.6rem; // 1.6rem = 16px, magic!
+	font-size: 1.6rem !important; // 1.6rem = 16px, magic!
+	line-height: 1.7 !important;
+	color: #8c92a0 !important;
+	font-weight: 300 !important;
+	::-moz-selection {
+		background: #000;
+		color: #fff; 
+	}
+	::selection {
+		background: #000;
+		color: #fff; 
+	}
 }
 
 sup {
@@ -22,3 +34,7 @@ ul {
 input.invalid {
     border: 1px solid #9d261d;
 }
+
+.text-black {
+	color: #000; }
+  

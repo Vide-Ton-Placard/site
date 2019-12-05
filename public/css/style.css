@@ -1,27 +1,4 @@
 /* Base */
-body {
-  line-height: 1.7;
-  color: #8c92a0;
-  font-weight: 300;
-  font-size: 16px; }
-
-::-moz-selection {
-  background: #000;
-  color: #fff; }
-
-::selection {
-  background: #000;
-  color: #fff; }
-
-a {
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease; }
-  a:hover {
-    text-decoration: none; }
-
-.text-black {
-  color: #000; }
 
 .site-wrap:before {
   -webkit-transition: .3s all ease-in-out;
@@ -48,7 +25,7 @@ a {
     opacity: 1;
     visibility: visible; }
 
-.btn {
+/* .btn {
   text-transform: uppercase;
   position: relative;
   -webkit-transition: 0.2s all ease-in-out !important;
@@ -74,7 +51,7 @@ a {
   .btn:hover {
     -webkit-box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9) !important;
     box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9) !important;
-    top: -2px; }
+    top: -2px; } */
 
 .form-control {
   height: 43px; }
@@ -83,38 +60,6 @@ a {
   .form-control:hover, .form-control:active, .form-control:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
-
-.site-section {
-  padding: 2.5em 0; }
-  @media (min-width: 768px) {
-    .site-section {
-      padding: 5em 0; } }
-  .site-section.site-section-sm {
-    padding: 4em 0; }
-
-.site-section-heading {
-  font-size: 30px;
-  color: #25262a;
-  position: relative; }
-  .site-section-heading:before {
-    content: "";
-    left: 0%;
-    top: 0;
-    position: absolute;
-    width: 40px;
-    height: 2px;
-    background: #7971ea; }
-  .site-section-heading.text-center:before {
-    content: "";
-    left: 50%;
-    top: 0;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    position: absolute;
-    width: 40px;
-    height: 2px;
-    background: #7971ea; }
 
 .border-top {
   border-top: 1px solid #edf0f5 !important; }
@@ -446,7 +391,6 @@ a {
 
 /* Blocks */
 .site-blocks-cover {
-  background-image: url(../images/blog_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
