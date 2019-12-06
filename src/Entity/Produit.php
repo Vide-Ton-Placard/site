@@ -34,7 +34,7 @@ class Produit
     private $description_produit;
 
     /**
-     * @ORM\Column(type="decimal", precision=10, scale=0)
+     * @ORM\Column(type="string", precision=10, scale=0)
      */
     private $prix_produit;
 
