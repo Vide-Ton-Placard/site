@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ProfileController extends AbstractController
 {
     /**
-     * @Route("/mon-profil", name="profile", methods={"GET,"POST"})
+     * @Route("/mon-profil", name="profile", methods={"GET"})
      */
     public function show()
     {
