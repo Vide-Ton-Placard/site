@@ -2,15 +2,11 @@
 
 {% block title %}Nouveau Produit{% endblock %}
 
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/app.scss') }}">
+{% endblock %}
 {% block body %}
-    <div class="container">
-        <div class="row text-ali">
-            <h1>Veuillez renseigner le formulaire ci dessous pour ajouter un article en vente.</h1>
-            <hr>
-
-            {{ include('produit/_form.html.twig') }}
-            <br>
-            <a href="{{ path('produit_index') }}">Voir tous les produits</a>
-        </div>
-    </div>
+  <br>
+  {{ include('produit/_form.html.twig') }}
+  <a href="{{ path('produit_index') }}">Voir tous les produits</a>
 {% endblock %}

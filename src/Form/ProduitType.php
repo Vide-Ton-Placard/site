@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Etat;
+use App\Entity\Statut;
 use App\Entity\Produit;
 use App\Entity\CategorieProduit;
 use Symfony\Component\Form\AbstractType;
@@ -10,6 +11,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class ProduitType extends AbstractType
 {
@@ -23,7 +25,10 @@ class ProduitType extends AbstractType
             ->add('libelle_produit', TextType::class, ['label' => 'Nom du produit'])
             ->add('description_produit', TextType::class, ['label' => 'Détail'])
             ->add('prix_produit', TextType::class, ['label' => 'Prix'])
-            ->add('statut')
+            ->add('statut', EntityType::class, ['class' => Statut::class, 'choice_label' => 'libelle_statut', ],['label' => 'Statut']) 
+            //->add('submit', SubmitType::class, [
+               // 'attr' => ['class' => 'btn btn-info'],
+            //    ]);
 
         ;
     }
