@@ -26,10 +26,9 @@ class ProduitType extends AbstractType
             ->add('description_produit', TextType::class, ['label' => 'Détail'])
             ->add('prix_produit', TextType::class, ['label' => 'Prix'])
             ->add('statut', EntityType::class, ['class' => Statut::class, 'choice_label' => 'libelle_statut', ],['label' => 'Statut']) 
-            //->add('submit', SubmitType::class, [
-               // 'attr' => ['class' => 'btn btn-info'],
-            //    ]);
-
+            ->add('submit', SubmitType::class, [
+                'attr' => ['class' => 'btn btn-info'],
+            ]);
         ;
     }
 
