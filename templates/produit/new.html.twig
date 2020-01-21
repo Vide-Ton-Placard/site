@@ -2,7 +2,13 @@
 
 {% block title %}Nouveau Produit{% endblock %}
 
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/app.scss') }}">
+{% endblock %}
 {% block body %}
+  <br>
+  {{ include('produit/_form.html.twig') }}
+  <a href="{{ path('produit_index') }}">Voir tous les produits</a>
     <div class="bg-light py-3">
         <div class="container">
             <div class="row">
@@ -103,18 +109,15 @@
               </div>
             </form>
           </div>
-         
-
+          
           </div>
         </div>
       </div>
     </div>
-
-
-
             {{ include('produit/_form.html.twig') }}
             <br>
             <a href="{{ path('produit_index') }}">Voir tous les produits</a>
         </div>
     </div>
+
 {% endblock %}
