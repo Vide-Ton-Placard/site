@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Etat;
 use App\Entity\Statut;
 use App\Entity\Produit;
+use App\Entity\TypeProduit;
 use App\Entity\CategorieProduit;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -19,7 +20,7 @@ class ProduitType extends AbstractType
     {
         $builder
             ->add('categorie', EntityType::class, ['class' => CategorieProduit::class, 'choice_label' => 'libelle_categorie', 'attr' => ['class' => 'mb-3']]) 
-            ->add('type', TextType::class, ['label' => 'Type de produit'])
+            ->add('type', EntityType::class, ['class' => TypeProduit::class, 'choice_label' => 'libelle', 'attr' => ['class' => 'mb-3']]) 
             ->add('taille_produit', TextType::class, ['label' => 'Taille'])
             ->add('etat', EntityType::class, ['class' => Etat::class, 'choice_label' => 'libelle_etat', ],['label' => 'Etat']) 
             ->add('libelle_produit', TextType::class, ['label' => 'Nom du produit'])
