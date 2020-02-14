@@ -10,7 +10,7 @@
 ```> composer dump-autoload```
 5. Crééz la base de données : ```> php bin/console doctrine:database:create```
 6. Lancez la migration vers la base de données : ```> php bin/console doctrine:migrations:migrate```
-7. Lancez le serveur puis rendez-vous sur http://127.0.0.1:8000/: ```> symfony server:start```
+7. Lancez le serveur puis rendez-vous sur http://127.0.0.1:8000/: ```> php bin/console server:start```
 
 **Dans un autre terminal :**
 
@@ -29,7 +29,7 @@
 ```> composer dump-autoload```
 5. Create the database : ```> php bin/console doctrine:database:create```
 6. Make the migration to database : ```> php bin/console doctrine:migrations:migrate```
-7. Launch server ang go to http://127.0.0.1:8000/: ```> symfony server:start```
+7. Launch server ang go to http://127.0.0.1:8000/: ```> php bin/console server:start```
 
 **In another terminal :**
 

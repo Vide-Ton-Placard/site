@@ -17,8 +17,8 @@
         <div class="col-lg-6 my-4 my-md-5 text-center text-md-left align-self-end">
           <div class="intro-text text-center text-md-left">
             <div class="d-flex justify-content-around">
-              <a href="#" class="btn btn-sm btn-primary">Vendre</a>
-              <a href="#" class="btn btn-sm btn-primary">Explorer</a>
+              <a href="#" class="btn btn-primary btn-vendre">Vendre</a>
+              <a href="#" class="btn btn-primary btn-explorer">Explorer</a>
             </div>
           </div>
         </div>
@@ -27,7 +27,8 @@
   </div>
 </div>
 
-<div class="site-section site-section-sm site-blocks-1">
+{# Bloc services #}
+{# <div class="site-section site-section-sm site-blocks-1">
   <div class="container">
     <div class="row py-5">
       <div class="col-md-4 d-lg-flex mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="">
@@ -59,9 +60,10 @@
       </div>
     </div>
   </div>
-</div>
+</div> #}
 
-<div class="site-section site-blocks-2">
+{# bloc category #}
+{# <div class="site-section site-blocks-2">
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
@@ -99,85 +101,45 @@
       </div>
     </div>
   </div>
-</div>
+</div> #}
 
 <div class="site-section block-3 site-blocks-2 bg-light">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-7 site-section-heading text-center pt-4">
-        <h2>Featured Products</h2>
+        <h2>Derniers articles</h2>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="nonloop-block-3 owl-carousel">
-          <div class="item">
-            <div class="block-4 text-center">
-              <figure class="block-4-image">
-                <img src="{{ asset('images/cloth_1.jpg') }}" alt="Image placeholder" class="img-fluid">
-              </figure>
-              <div class="block-4-text p-4">
-                <h3><a href="#">Tank Top</a></h3>
-                <p class="mb-0">Finding perfect t-shirt</p>
-                <p class="text-primary font-weight-bold">$50</p>
-              </div>
+          {# loop article #}
+          {% for produit in produits %}
+            <div class="item">
+              <a href="/produit/{{produit.id}}">
+                <div class="block-4 text-center">
+                  <figure class="block-4-image">
+                    <img src="{{ asset('images/cloth_1.jpg') }}" alt="Image placeholder" class="img-fluid">
+                  </figure>
+                  <div class="block-4-text p-4">
+                    <h3>{{ produit.libelleProduit }}</h3>
+                    <p class="mb-0">{{ produit.tailleProduit }}</p>
+                    <p class="text-primary font-weight-bold">{{ produit.prixProduit }} XFP</p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </div>
-          <div class="item">
-            <div class="block-4 text-center">
-              <figure class="block-4-image">
-                <img src="{{ asset('images/shoe_1.jpg') }}" alt="Image placeholder" class="img-fluid">
-              </figure>
-              <div class="block-4-text p-4">
-                <h3><a href="#">Corater</a></h3>
-                <p class="mb-0">Finding perfect products</p>
-                <p class="text-primary font-weight-bold">$50</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="block-4 text-center">
-              <figure class="block-4-image">
-                <img src="{{ asset('images/cloth_2.jpg') }}" alt="Image placeholder" class="img-fluid">
-              </figure>
-              <div class="block-4-text p-4">
-                <h3><a href="#">Polo Shirt</a></h3>
-                <p class="mb-0">Finding perfect products</p>
-                <p class="text-primary font-weight-bold">$50</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="block-4 text-center">
-              <figure class="block-4-image">
-                <img src="{{ asset('images/cloth_3.jpg') }}" alt="Image placeholder" class="img-fluid">
-              </figure>
-              <div class="block-4-text p-4">
-                <h3><a href="#">T-Shirt Mockup</a></h3>
-                <p class="mb-0">Finding perfect products</p>
-                <p class="text-primary font-weight-bold">$50</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="block-4 text-center">
-              <figure class="block-4-image">
-                <img src="{{ asset('images/shoe_1.jpg') }}" alt="Image placeholder" class="img-fluid">
-              </figure>
-              <div class="block-4-text p-4">
-                <h3><a href="#">Corater</a></h3>
-                <p class="mb-0">Finding perfect products</p>
-                <p class="text-primary font-weight-bold">$50</p>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
+    </div>
+    <div class="text-center">
+      <a href="/produit" class="btn btn-primary btn-vendre">En voir plus</a>
     </div>
   </div>
 </div>
 
-<div class="site-section block-8">
+{# <div class="site-section block-8">
   <div class="container">
     <div class="row justify-content-center  mb-5">
       <div class="col-md-7 site-section-heading text-center pt-4">
@@ -196,5 +158,5 @@
       </div>
     </div>
   </div>
-</div>
+</div> #}
 {% endblock %}

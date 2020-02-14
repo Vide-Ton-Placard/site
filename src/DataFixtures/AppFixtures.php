@@ -68,7 +68,7 @@ class AppFixtures extends Fixture
         $produit1->setLibelleProduit('produit1');
         $produit1->setTailleProduit('L');
         $produit1->setDescriptionProduit('Ceci est la description de mon produit');
-        $produit1->setPrixProduit('1500 ');
+        $produit1->setPrixProduit('1500');
         $produit1->setType('Pantalon');
         $produit1->setCategorie($catProduit1);
         $produit1->setEtat($etat0);
@@ -79,7 +79,7 @@ class AppFixtures extends Fixture
         $produit2->setLibelleProduit('produit2');
         $produit2->setTailleProduit('M');
         $produit2->setDescriptionProduit('Ceci est la description de mon produit');
-        $produit2->setPrixProduit('5000 ');
+        $produit2->setPrixProduit('5000');
         $produit2->setType('Jupe');
         $produit2->setCategorie($catProduit2);
         $produit2->setEtat($etat2);
@@ -90,7 +90,7 @@ class AppFixtures extends Fixture
         $produit3->setLibelleProduit('produit3');
         $produit3->setTailleProduit('XXL');
         $produit3->setDescriptionProduit('Ceci est la description de mon produit');
-        $produit3->setPrixProduit('1500 frs');
+        $produit3->setPrixProduit('1500');
         $produit3->setType('Chaussures');
         $produit3->setCategorie($catProduit0);
         $produit3->setEtat($etat1);
