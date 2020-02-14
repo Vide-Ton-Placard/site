@@ -36,3 +36,12 @@
 		box-shadow: none!important;
 	}
 }
+
+.btn-vendre, .btn-explorer {
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
+	@include media-breakpoint-up(md) {
+		paddin: 1rem 4rem;
+		font-size: 1.7rem;
+	}
+}
