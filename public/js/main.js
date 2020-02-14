@@ -12,11 +12,17 @@ jQuery(document).ready(function($) {
 		$('.nonloop-block-3').owlCarousel({
 	    center: false,
 	    items: 1,
-	    loop: false,
+	    loop: true,
 			stagePadding: 15,
 	    margin: 20,
-	    nav: true,
-			navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+	    // nav: true,
+		// 	navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+
+// unactivated during dev
+		// autoplay:true,
+		// autoplayTimeout:2500,
+		// autoplayHoverPause:true,
+
 	    responsive:{
         600:{
         	margin: 20,
