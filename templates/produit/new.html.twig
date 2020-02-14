@@ -7,7 +7,6 @@
 {% endblock %}
 {% block body %}
   <br>
-  {{ include('produit/_form.html.twig') }}
   <a href="{{ path('produit_index') }}">Voir tous les produits</a>
     <div class="bg-light py-3">
         <div class="container">
@@ -18,7 +17,7 @@
     </div>  
 
     <div class="site-section">
-      <div class="container">
+      <div class="container justify-content-center">
         <div class="row">
           <div class="col-md-12">
             <h2 class="h3 mb-3 text-black">Veuillez renseigner le formulaire ci dessous pour ajouter un article en vente.</h2>
@@ -26,95 +25,80 @@
           
           <div class="col-md-7 offset-sm-3">
             <hr>
-
-            <form action="#" method="post">
-              
-              <div class="p-3 p-lg-5 border">
-                <div class="form-group row">
-                  <div class="col-sm-8">
-                    <label class="text-black">Pour qui ?</label>
-                    <select class="form-control">
-                        <option>{{ form_widget(form.categorie) }}</option>
-                        <option>Femmes </option>
-                        <option>Enfants</option>
-                        <option>Bébés</option>
-                      </select>
-                  </div>
-                  <div class="col-md-8">
-                    <label class="text-black">Quoi? </label>
-                    <select class="form-control">
-                       
-                      </select>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-md-8">
-                    <label  class="text-black">Taille </label>
-                    <select class="form-control">
-                        <option>S</option>
-                        <option>XS </option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                        <option>XXL</option>
-                        <option>XXXL</option>
-                        
-                      </select>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-md-8">
-                    <label for="c_subject" class="text-black">Etat </label>
-                   <select class="form-control">
-                     <option>Neuf</option>
-                     <option>Très bon état </option>
-                     <option>Bon état</option>
-                     <option>Etat satisfaisant</option>
-                   </select>
-                  </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-md-8">
-                      <label for="c_email" class="text-black">Ajoutez un titre</label>
-                      <input type="email" class="form-control" id="c_email" name="c_email" placeholder="">
-                    </div>
-                  </div>
+            {{ form_start(form) }}  
+              <div class="p-3 p-lg-5 ">
 
                 <div class="form-group row">
-                  <div class="col-md-8">
-                    <label for="c_message" class="text-black">Détails </label>
-                    <textarea name="c_message" id="c_message" cols="30" rows="7" class="form-control"></textarea>
+                  <div  class="text-black col-12 col-lg-4">Pour qui ?</div>
+                  <div class="col-12 col-lg-8">
+                    {{ form_widget(form.categorie) }}
+                  </div>    
+                </div>
+                <div class="form-group row">
+                  <div  class="text-black col-12 col-lg-4">Quoi ?</div>
+                  <div class="col-12 col-lg-8">
+                    {{ form_widget(form.type) }}
                   </div>
                 </div>
-               
+                <div class="form-group row">
+                  <div  class="text-black col-12 col-lg-4">Quelle taille ?</div>
+                  <div class="col-12 col-lg-8">
+                    {{ form_widget(form.taille_produit) }}
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div  class="text-black col-12 col-lg-4">Quelle état ?</div>
+                  <div class="col-12 col-lg-8">
+                    {{ form_widget(form.etat) }}
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div  class="text-black col-12 col-lg-4">Nom du produit ?</div>
+                  <div class="col-12 col-lg-8">
+                      {{ form_widget(form.libelle_produit) }}
+                  </div>
+                </div>
 
                 <div class="form-group row">
-                    <div class="col-md-8">
-                      <label  class="text-black">Prix </label> </label>
-                      <input  class="form-control" >
-                    </div>
+                  <div class="col-12 col-lg-4">Details ?</div>
+                  <div class="col-12 col-lg-8">
+                    {{ form_widget(form.description_produit) }}
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-12 col-lg-4">Quel prix ?</div>
+                  <div class="col-12 col-lg-8">
+                    {{ form_widget(form.prix_produit) }}
+                  </div>
                </div>
                <div class="form-group row">
                   <div class="col-md-8">
-                
-                    <label  class="text-black">Ajoutez des photos </label>
+                    <label  class="text-black">Ajouter des photos </label>
                     <input class="form-control-file form-control form-control" type="file" >
                   </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-lg-8">
-                      <input type="submit" class="btn btn-primary btn-lg btn-block " value="Mettre en vente">
+                    {{ form_widget(form.prix_produit) }}
+                     <button type="submit" class="btn btn-info">{{ button_label|default('Mettre en vente') }}</button>
                     </div>
                   </div>
               </div>
-            </form>
+              <div class="form-group row">
+                    <div class="col-12 col-lg-4">Statut ?</div>
+                    <div class="col-lg-8">
+                    {{ form_widget(form.statut_produit) }}
+                    </div>
+                  </div>
+              </div>
+            {{ form_end(form) }}
           </div>
           
           </div>
         </div>
       </div>
     </div>
-            {{ include('produit/_form.html.twig') }}
+            
             <br>
             <a href="{{ path('produit_index') }}">Voir tous les produits</a>
         </div>
