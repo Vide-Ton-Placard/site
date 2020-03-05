@@ -102,6 +102,13 @@ class User implements UserInterface
         return (string) $this->email;
     }
 
+    public function setUsername(string $email): self
+    {
+        $this->email = $email;
+        
+        return $this;
+    }
+
     /**
      * @see UserInterface
      */
@@ -109,7 +116,7 @@ class User implements UserInterface
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        // $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
     }

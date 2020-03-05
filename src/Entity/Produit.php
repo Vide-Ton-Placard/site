@@ -2,9 +2,10 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProduitRepository")
@@ -206,15 +207,15 @@ class Produit
         return $this;
     }
 
-    public function gettype(): ?string
+    public function getType(): ?TypeProduit
     {
         return $this->type;
     }
 
-    public function settype(string $type): self
+    public function setType(?TypeProduit $type): self
     {
-        $this->Type = $Type;
-
+        $this->type = $type;
+        
         return $this;
     }
 
