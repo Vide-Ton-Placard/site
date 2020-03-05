@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Etat;
 use App\Entity\Statut;
 use App\Entity\Produit;
+use App\Entity\TypeProduit;
 use App\Entity\CategorieProduit;
 use App\Repository\EtatRepository;
 use Symfony\Component\Form\AbstractType;
@@ -43,7 +44,9 @@ class ProduitType extends AbstractType
                  'attr' => ['class' => 'form-control'],
                  'placeholder'=>'Cartégorie'
             ]) 
-            ->add('type', TextType::class,[
+            ->add('type', EntityType::class,[
+                'class' => TypeProduit::class,
+                'choice_label' => 'libelle',
                 'label' => 'Type de produit',
                 'attr' => ['class' => 'form-control'],
                 'label' =>'Type de produit'
@@ -78,7 +81,6 @@ class ProduitType extends AbstractType
                 'choice_label' => 'libelle_statut',
                 'attr' => ['class' => 'form-control']               
             ]) ;
-        
     }
 
     public function configureOptions(OptionsResolver $resolver)
