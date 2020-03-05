@@ -19,7 +19,7 @@
     <div class="site-section">
       <div class="container justify-content-center">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 text-center">
             <h2 class="h3 mb-3 text-black">Veuillez renseigner le formulaire ci dessous pour ajouter un article en vente.</h2>
           </div>
           
@@ -60,39 +60,44 @@
                 </div>
 
                 <div class="form-group row">
-                  <div class="col-12 col-lg-4">Details ?</div>
-                  <div class="col-12 col-lg-8">
+                  <div  class="text-black col-12 col-lg-4">Details ?</div>
+                  <div class="text-black col-12 col-lg-8">
                     {{ form_widget(form.description_produit) }}
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="col-12 col-lg-4">Quel prix ?</div>
-                  <div class="col-12 col-lg-8">
+                  <div  class="text-black col-12 col-lg-4">Quel prix ?</div>
+                  <div class="text-black col-12 col-lg-8">
                     {{ form_widget(form.prix_produit) }}
                   </div>
                </div>
                <div class="form-group row">
-               <div class="col-12 col-lg-4">Ajouter des photos</div>
-                  <div class="col-md-8">
+                  <div  class="text-black col-12 col-lg-4">Date d'ajout ?</div>
+                  <div class="text-black col-12 col-lg-8">
+                    {{ form_widget(form.date_ajout) }}
+                  </div>
+               </div>
+               <div class="form-group row">
+               <div  class="text-black col-12 col-lg-4">Ajouter des photos</div>
+                  <div class="text-black col-md-8">
                     <input class="form-control-file form-control form-control" type="file" >
                   </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-12 col-lg-4">Statut ?</div>
-                    <div class="col-lg-8">
-                    {{ form_widget(form.statut) }}
+                    <div class="col-12 col-lg-8">
+                      {{ form_widget(form.statut) }}
                     </div>
                   </div>
               </div>
                 <div class="form-group row">
-                    <div class="col-lg-8">
-                    {{ form_widget(form.prix_produit) }}
-                     <button type="submit" class="btn btn-info">{{ button_label|default('Mettre en vente') }}</button>
-                    </div>
-                  </div>
-              </div>
-              
-            {{ form_end(form) }}
+                    <div class="col-12 text-center">
+                      {{ form_widget(form.prix_produit) }}
+                      <button type="submit" class="btn btn-info ">{{ button_label|default('Mettre en vente') }}</button>
+                      </div>
+                   </div>
+                </div>
+              {{ form_end(form) }}
           </div>
           
           </div>
