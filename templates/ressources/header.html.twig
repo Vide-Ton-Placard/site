@@ -19,7 +19,12 @@
         <div class="col-6 col-md-3 order-3 order-md-3 text-right">
             <div class="site-top-icons">
             <ul>
-                <li><a href="#"><span class="icon icon-person"></span></a></li>
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}            
+                <li><a href="{{ path("profil") }}"><span class="icon icon-person"></span></a></li>
+                <a href="{{ path("app_logout") }}">Se déconnecter</a>
+            {% else %}
+                <a href="{{ path("app_login") }}">Se connecter</a>
+            {% endif %}
                 <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
                 <li>
                 <a href="cart.html" class="site-cart">
