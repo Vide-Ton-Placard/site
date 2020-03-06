@@ -20,6 +20,7 @@ class ProduitController extends AbstractController
      */
     public function index(ProduitRepository $produitRepository): Response
     {
+        
         return $this->render('produit/index.html.twig', [
             'produits' => $produitRepository->findAll(),
         ]);
@@ -31,6 +32,9 @@ class ProduitController extends AbstractController
     public function new(Request $request): Response
     {
         $produit = new Produit();
+        $user = $this->getUser();
+        // dd($user);
+        $produit->setUser($user);
         $form = $this->createForm(ProduitType::class, $produit);
         $form->handleRequest($request);
 
@@ -39,7 +43,7 @@ class ProduitController extends AbstractController
             $entityManager->persist($produit);
             $entityManager->flush();
 
-            return $this->redirectToRoute('produit_index');
+            return $this->redirectToRoute('profil');
         }
 
         return $this->render('produit/new.html.twig', [

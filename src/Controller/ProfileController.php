@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Produit;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -13,7 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ProfileController extends AbstractController
 {
     /**
-     * @Route("/mon-profil", name="profile", methods={"GET"})
+     * @Route("", name="profil", methods={"GET"})
      */
     public function show()
     {
@@ -21,8 +22,15 @@ class ProfileController extends AbstractController
 
         $user = $this->getUser();
 
+        $produits =  $this->getDoctrine()->getRepository(Produit::class)->findBy(
+            array(
+                'user' => $this->getUser()
+            )
+        );
+
         return $this->render('profile/show.html.twig', [
             'user' => $user,
+            'produits' => $produits
         ]);
     }
 }
