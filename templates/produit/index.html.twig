@@ -58,9 +58,10 @@
                             <img src="{{ asset('images/cloth_1.jpg') }}" alt="Image placeholder" class="img-fluid">
                         </figure>
                         <div class="block-4-text p-4">
-                            <h3>{{ produit.user.nom }} {{ produit.user.prenom }}</h3>
+                            <h3>{{ produit.libelleProduit }}</h3>
                             <p class="mb-0">{{ produit.tailleProduit }}</p>
                             <p class="text-primary font-weight-bold">{{ produit.prixProduit }} XFP</p>
+                            <h3>{{ produit.libelleProduit }} {{ produit.user.prenom }}</h3>
                         </div>
                         </div>
                     </a>
