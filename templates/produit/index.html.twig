@@ -38,4 +38,36 @@
     </table>
 
     <a href="{{ path('produit_new') }}">Create new</a>
+
+    <div class="search-filter border-top border-bottom">    
+        <div class="container">
+            <h1>Filtrez vos recherches&nbsp;:</h1>
+        </div>
+    </div>
+    <section class="product-list pt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                {# loop article #}
+                {% for produit in produits %}
+{# {{dump|produit.user}} #}
+
+                    <div class="item col-12 col-md-4 col-lg-2 mb-5">
+                    <a href="/produit/{{produit.id}}">
+                        <div class="block-4 text-center">
+                        <figure class="block-4-image">
+                            <img src="{{ asset('images/cloth_1.jpg') }}" alt="Image placeholder" class="img-fluid">
+                        </figure>
+                        <div class="block-4-text p-4">
+                            <h3>{{ produit.user.nom }} {{ produit.user.prenom }}</h3>
+                            <p class="mb-0">{{ produit.tailleProduit }}</p>
+                            <p class="text-primary font-weight-bold">{{ produit.prixProduit }} XFP</p>
+                        </div>
+                        </div>
+                    </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
 {% endblock %}
