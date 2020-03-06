@@ -18,11 +18,13 @@ class ProduitController extends AbstractController
     /**
      * @Route("/", name="produit_index", methods={"GET"})
      */
-    public function index(ProduitRepository $produitRepository): Response
-    {
+    public function index(): Response
+    {   
+        $produits = $this->getDoctrine()->getRepository(Produit::class)->findAll();
+        // dd($produits);
         
         return $this->render('produit/index.html.twig', [
-            'produits' => $produitRepository->findAll(),
+            'produits' => $produits
         ]);
     }
 
